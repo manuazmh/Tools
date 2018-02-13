@@ -5,12 +5,12 @@ import java.io.Serializable;
 /**
  * Base Request
  *
- * @Author ZengMinghua
- * @Date 2017/12/27 0:12
+ * @author zengminghua
+ * @date 20171227
  */
 public class BaseRequest implements Serializable {
 
-    private static final long serialVersionUID = 188666123123932348L;
+    private static final long serialVersionUID = 8608984702069486233L;
 
     /**
      * requestId

@@ -3,9 +3,11 @@ package com.zmh.util;
 import com.zmh.util.tools.RandomNumber;
 
 /**
- * common tools for zmh
+ * common tools
  *
- * @version v0.0.1
+ * @author zengminghua
+ * @version v1.0.0
+ * @date 20180213
  * @since 20171226
  */
 public class Main {
@@ -18,12 +20,10 @@ public class Main {
     public static void main(String[] args) {
 
         for (int i = 0; i < CIRCLE_COUNT; i++) {
-            // String result = Randomkey.generate();
 
-            String result = RandomNumber.generate();
-            // String result = SerialUtils.generateTraceNo(24);
+            String result = RandomNumber.generateLong();
 
-            // System.out.println(result);
+            System.out.println(result);
         }
 
     }
