@@ -13,7 +13,7 @@ public class BaseRequest implements Serializable {
     private static final long serialVersionUID = 188666123123932348L;
 
     /**
-     * 请求ID
+     * requestId
      */
     protected Long requestId;
 }
