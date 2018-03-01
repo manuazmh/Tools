@@ -15,5 +15,13 @@ public class BaseRequest implements Serializable {
     /**
      * requestId
      */
-    protected Long requestId;
+    private Long requestId;
+
+    public Long getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(Long requestId) {
+        this.requestId = requestId;
+    }
 }
