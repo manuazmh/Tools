@@ -1,6 +1,9 @@
 package com.zmh.util.tools;
 
+import com.zmh.util.vo.response.BaseResponse;
+
 import java.util.Random;
+import java.util.UUID;
 
 /**
  * Random Number tool
@@ -8,7 +11,7 @@ import java.util.Random;
  * @author zengminghua
  * @date 20171229
  */
-public class RandomNumber {
+public class RandomNumber extends BaseResponse {
 
     private static final int RANDOM_LENGTH = 19;
 
@@ -21,13 +24,29 @@ public class RandomNumber {
 
         Random random = new Random();
         long randomNu = random.nextLong();
-        String randomStr = String.valueOf(Math.abs(randomNu));
+        StringBuilder randomStr = new StringBuilder(String.valueOf(Math.abs(randomNu)));
 
         // if the randomStr's length < 19, add num.
         while (randomStr.length() < RANDOM_LENGTH) {
-            randomStr += random.nextInt(10);
+            randomStr.append(random.nextInt(10));
         }
 
-        return randomStr;
+        System.out.println(randomStr);
+        return randomStr.toString();
     }
+
+    /**
+     * make a UUID
+     *
+     * @return String 36
+     */
+    public static String generateUuid() {
+
+        UUID uuid = UUID.randomUUID();
+
+        System.out.println(uuid.toString());
+
+        return uuid.toString();
+    }
+
 }
