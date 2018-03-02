@@ -1,7 +1,10 @@
 package com.zmh.util;
 
+import com.zmh.util.tools.MockService;
 import com.zmh.util.tools.RandomNumber;
 import com.zmh.util.tools.RsaKey;
+import com.zmh.util.vo.request.MockRequest;
+import com.zmh.util.vo.response.MockResponse;
 
 import java.util.Map;
 
@@ -36,6 +39,13 @@ public class Main {
             Map<String, String> keyMap = RsaKey.generateKey("RSA", 2048);
 
             System.out.println("Hello World");
+
+            MockRequest request = new MockRequest();
+            request.setStringValue("Hello World");
+
+            MockResponse response = MockService.mock(request);
+            System.out.println(response.getStringValue());
+            System.out.println(response.getDateValue());
 
         }
 
